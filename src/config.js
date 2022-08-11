@@ -5,18 +5,22 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.sol;
 
 // General metadata for Ethereum
-const namePrefix = "my cock";
-const description = "Remember to replace your life";
+const namePrefix = "exclusive kwlotrypida";
+const description = "Remember nothing";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
-  symbol: "MyC",
+  symbol: "XKL",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: "none",
   creators: [
     {
       address: "z6KUp66TzewgHuv512rGgtg3uuTcYYDnC3PfjEsy1n5",
-      share: 100,
+      share: 50,
+    },
+    {
+      address: "DyofBj2qQVQEUPbxjvtdzf7JG3AJu9U9P9ajt2FBmRgB",
+      share: 50,
     },
   ],
 };
@@ -24,7 +28,7 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 15,
+    growEditionSizeTo: 20,
     layersOrder: [
       // { name: "heading" },
       // { name: "hair" },
@@ -35,29 +39,31 @@ const layerConfigurations = [
       // { name: "horns" },
       // { name: "earrings" },
 
-      { name: "Background" },
+      // { name: "Background" },
       { name: "hands" },
       { name: "arms" },
+      { name: "armTattoo" },
       { name: "legs" },
       { name: "body" },
+      // { name: "bodyTattoo" },
 
-      { name: "face" },
-      { name: "head" },
+      // { name: "face" },
+      // { name: "head" },
 
-      { name: "heading" },
-      { name: "hair" },
-      { name: "eyes" },
-      { name: "midface" },
-      { name: "mouth" },
-      { name: "ears" },
-      { name: "horns" },
-      { name: "earrings" },
+      // { name: "heading" },
+      // { name: "hair" },
+      // { name: "eyes" },
+      // { name: "midface" },
+      // { name: "mouth" },
+      // { name: "ears" },
+      // { name: "horns" },
+      // { name: "earrings" },
 
-      {name: "lizardFace"},
-      {name: "lizardEyes"},
-      {name: "lizardMidface"},
-      {name: "lizardHorns"},
-      {name: "lizardEarrings"},
+      // {name: "lizardFace"},
+      // {name: "lizardEyes"},
+      // {name: "lizardMidface"},
+      // {name: "lizardHorns"},
+      // {name: "lizardEarrings"},
     ],
   },
 ];
@@ -100,7 +106,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
